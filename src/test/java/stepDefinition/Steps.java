@@ -39,8 +39,6 @@ public class Steps {
 
 		driver.findElement(By.xpath("//div[@class='nav-menu-inner']//a[contains(text(),'Pricing')]")).click();
 
-
-		Thread.sleep(2000);
 	}
 
 	@Then("^I select a service randomly and toggle view details button")
@@ -50,18 +48,13 @@ public class Steps {
 		gridContainer = pricingCardSection.findElement(By.xpath("//div[@class='p--container is--pricing-cards-new']"));
 		gridItems = gridContainer.findElements(By.xpath("//div[@class='price--card-wrapper is--1']"));
 
-//				List<WebElement> div_elements = driver.findElements(By.xpath("//div[@class='p--container is--pricing-cards-new']//div[@class='price--card-wrapper.is--1']"));
-				Random random = new Random();
+		Random random = new Random();
 		int num = random.nextInt(gridItems.size());
 		selectedGridItem = gridItems.get(num);
 		WebElement viewButton = selectedGridItem.findElement(By.xpath("//div[@class='read-more-less']"));
 		viewButton.click();
 		viewButton.click();
 
-		String test = selectedGridItem.getText();
-		System.out.println(test);
-
-		Thread.sleep(2000);
 	}
 
 	@Then("^I click the select button")
@@ -69,10 +62,6 @@ public class Steps {
 
 		selectedGridItem.findElement(By.xpath("//a[@class='p--button is--price w-button']")).click();
 
-		Thread.sleep(2000);
-		Thread.sleep(2000);
 	}
-
-
 
 }

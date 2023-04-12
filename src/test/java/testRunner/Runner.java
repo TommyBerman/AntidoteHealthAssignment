@@ -21,12 +21,11 @@ import java.util.concurrent.TimeUnit;
 @RunWith(Cucumber.class)
 @CucumberOptions(features = { "Feature" }, glue = { "stepDefinition" }, tags = { "@E2E-antidote-price-plan" }, plugin = { "pretty",
 "html:target/Cucumber-htmlreport", "json:target/cucumber-report.json",
-"com.cucumber.listener.ExtentCucumberFormatter:target/ExtentReport.html" }, dryRun = false, monochrome = true)
+"com.cucumber.listener.ExtentCucumberFormatter:target/ExtentReport.html" }, monochrome = true)
 
 
 
 public class Runner {
-
 
 
 static Properties prop = new Properties();
