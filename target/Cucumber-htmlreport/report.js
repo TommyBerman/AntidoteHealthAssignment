@@ -34,14 +34,14 @@ formatter.match({
   "location": "Steps.I_go_to_AntidoteHealth_website()"
 });
 formatter.result({
-  "duration": 14789532459,
+  "duration": 16271691583,
   "status": "passed"
 });
 formatter.match({
   "location": "Steps.I_navigate_to_pricing()"
 });
 formatter.result({
-  "duration": 7001947209,
+  "duration": 3136281666,
   "status": "passed"
 });
 formatter.scenario({
@@ -62,13 +62,25 @@ formatter.step({
   "name": "I click the select button",
   "keyword": "Then "
 });
+formatter.step({
+  "line": 12,
+  "name": "I Assert the plans features",
+  "keyword": "And "
+});
 formatter.match({
   "location": "Steps.I_select_a_service_randomly_and_toggle_view_details_button()"
 });
 formatter.result({
-  "duration": 31282582333,
+  "duration": 20554938875,
   "status": "passed"
 });
 formatter.match({
   "location": "Steps.I_click_the_select_button()"
+});
+formatter.result({
+  "duration": 4491473500,
+  "status": "passed"
+});
+formatter.match({
+  "location": "Steps.I_Assert_the_plans_features()"
 });

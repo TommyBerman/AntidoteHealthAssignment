@@ -9,3 +9,4 @@
     Scenario: User randomly selects a Service plan
       Then I select a service randomly and toggle view details button
       Then I click the select button
+      And I Assert the plans features
